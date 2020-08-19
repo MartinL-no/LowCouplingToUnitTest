@@ -7,7 +7,7 @@ using RestSharp;
 
 namespace LowCouplingToUnitTest
 {
-    class JokePairWhichStartsWithTheSameWordGenerator
+    class JokeGenerator
     {
         public async Task<string> GetJoke(string word)
         {
