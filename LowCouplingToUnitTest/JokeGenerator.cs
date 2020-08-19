@@ -9,7 +9,7 @@ namespace LowCouplingToUnitTest
 {
     class JokeGenerator
     {
-        public async Task<string> GetJoke(string word)
+        public async Task<string> GetJokeWithWordTwoTimes(string word)
         {
             var client = new RestClient("https://api.chucknorris.io");
             var request = new RestRequest($"/jokes/search?query={word}", DataFormat.Json);
