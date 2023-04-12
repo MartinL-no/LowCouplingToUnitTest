@@ -7,7 +7,6 @@ namespace LowCouplingToUnitTest
     {
         static void Main(string[] args)
         {
-
             MainAsync().Wait();
         }
 
