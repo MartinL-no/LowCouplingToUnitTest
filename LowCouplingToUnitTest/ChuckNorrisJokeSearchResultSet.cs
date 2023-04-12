@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LowCouplingToUnitTest
 {
-    public class ChuckNorrisJokeSearchResultSet
+    public class ChuckNorrisJokeSearchResultSet : IResultSet
     {
         public List<Joke> result { get; set; }
     }
@@ -13,5 +13,4 @@ namespace LowCouplingToUnitTest
     {
         public string value { get; set; }
     }
-
 }
