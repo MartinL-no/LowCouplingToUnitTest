@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -8,7 +8,7 @@ namespace LowCouplingToUnitTest
     {
         private string _word;
         private IClient _client;
-        private List<Joke> _jokes;
+        private List<string> _jokes;
 
         public JokeGenerator(IClient client)
         {
@@ -26,9 +26,8 @@ namespace LowCouplingToUnitTest
 
         private string GetJokeWithWordTwoTimes()
         {
-            foreach (var jokeObj in _jokes)
+            foreach (var joke in _jokes)
             {
-                var joke = jokeObj.value;
                 var firstPosition = joke.IndexOf(_word, StringComparison.OrdinalIgnoreCase);
                 if (firstPosition == -1) continue;
                 var secondPosition = joke.IndexOf(_word, firstPosition + 1, StringComparison.OrdinalIgnoreCase);

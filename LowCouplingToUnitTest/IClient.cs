@@ -6,6 +6,6 @@ namespace LowCouplingToUnitTest
 {
     public interface IClient
     {
-        public Task<List<Joke>> GetResult(string word);
+        public Task<List<string>> GetResult(string word);
     }
 }

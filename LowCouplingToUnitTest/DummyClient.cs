@@ -5,22 +5,18 @@ namespace LowCouplingToUnitTest.UnitTest
 {
     public class DummyClient : IClient
     {
-        private List<Joke> _jokes;
+        private List<string> _jokes;
 
-        public DummyClient(params string[] jokeStrings)
+        public DummyClient(params string[] jokes)
         {
-            _jokes = new List<Joke>();
-            foreach (var jokeString in jokeStrings)
+            _jokes = new List<string>();
+            foreach (var joke in jokes)
             {
-                var joke = new Joke()
-                {
-                    value = jokeString
-                };
                 _jokes.Add(joke);
             }
             
         }
-        public Task<List<Joke>> GetResult(string word)
+        public Task<List<string>> GetResult(string word)
         {
             return Task.FromResult(_jokes);
         }

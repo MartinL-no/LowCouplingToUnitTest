@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LowCouplingToUnitTest
 {
-    public class ChuckNorrisJokeSearchResultSet : IResultSet
+    public class ChuckNorrisJokeSearchResultSet
     {
         public List<Joke> result { get; set; }
     }
